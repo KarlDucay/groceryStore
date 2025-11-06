@@ -1,0 +1,10 @@
+
+RUN THE FOLLOWING COMMANDS BELOW
+
+##COMPILE : 
+javac -cp ".;lib/*" store/*.java test/*.java -d out
+##RUN : 
+java -cp ";out" store.Main
+
+## RUN TESTS :
+java -cp ".;out;lib/*" org.junit.runner.JUnitCore test.CheckoutCounterTest
