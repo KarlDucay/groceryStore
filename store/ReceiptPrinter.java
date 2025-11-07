@@ -1,7 +1,8 @@
 package store;
 
 import java.util.List;
-import store.helper.ScannedItem;
+
+import store.constructor.ScannedItem;
 
 public class ReceiptPrinter {
 

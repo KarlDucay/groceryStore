@@ -9,7 +9,7 @@ public class Product {
     private double discount; 
     private SaleTypes saletype;
 
-
+    //Regular sale product without quantity or discount
      public Product(String name, double price,SaleTypes saletype) {
         this.name = name;
         this.price = price;

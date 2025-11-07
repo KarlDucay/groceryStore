@@ -1,6 +1,6 @@
 package store;
 
-import store.helper.TestProducts;
+import store.constructor.TestProducts;
 
 public class Main {
 

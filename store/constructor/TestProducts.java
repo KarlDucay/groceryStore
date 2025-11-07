@@ -1,10 +1,9 @@
-package store.helper;
+package store.constructor;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import store.constructor.Product;
 import store.enums.SaleTypes;
 
 public class TestProducts {

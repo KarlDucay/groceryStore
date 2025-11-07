@@ -1,6 +1,4 @@
-package store.helper;
-
-import store.constructor.Product;
+package store.constructor;
 
 public class ScannedItem {
     private Product product;

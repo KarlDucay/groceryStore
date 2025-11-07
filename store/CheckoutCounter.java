@@ -3,13 +3,11 @@ package store;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.management.loading.PrivateClassLoader;
-
 import store.constructor.Product;
+import store.constructor.ScannedItem;
 import store.enums.SaleTypes;
 import store.helper.CheckandCalculateSaletype;
 import store.helper.SaleResult;
-import store.helper.ScannedItem;
 
 public class CheckoutCounter {
     
