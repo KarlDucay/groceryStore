@@ -30,7 +30,7 @@ public class TestProducts {
     Product detergent = new Product("Detergent Powder", 9, 10, SaleTypes.BUY_ONE_TAKE_ONE);
     Product tissue = new Product("Tissue Roll", 15, 6, SaleTypes.REGULAR);
     Product bottledWater = new Product("Bottled Water", 20, 12, SaleTypes.BULK);
-    Product softdrinks = new Product("Softdrinks", 35, 6, SaleTypes.SEASONAL);
+    Product softdrinks = new Product("Softdrinks", 35, 6, SaleTypes.REGULAR);
 
     private List<Product> products;
 
