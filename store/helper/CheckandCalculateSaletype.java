@@ -5,7 +5,7 @@ import store.enums.SaleTypes;
 import store.interfaces.SalesPromotion;
 
 public class CheckandCalculateSaletype {
-    public SaleResult checkandCalculateSaletype (SaleTypes saleTypes,double price, double quantity,double discount){
+    public double checkandCalculateSaletype (SaleTypes saleTypes,double price, double quantity,double discount){
         SalesPromotion promotion= new ProductOnSale();
         double discountedPrice;
         
@@ -13,15 +13,15 @@ public class CheckandCalculateSaletype {
         switch (saleTypes) {
                 case BUY_ONE_TAKE_ONE:
                     discountedPrice =promotion.buyOneTakeOne(price, quantity);
-                    return new SaleResult(discountedPrice, true);
+                    return discountedPrice;
                 case DISCOUNTED:
                     discountedPrice =promotion.applyDiscount(price, discount,quantity);
-                    return new SaleResult(discountedPrice, true);
+                     return discountedPrice;
                 case BUY_TWO_TAKE_ONE:
                     discountedPrice =promotion.buyTwoTakeOne(price, quantity);
-                    return new SaleResult(discountedPrice, true);
+                     return discountedPrice;
                 default:
-                    return new SaleResult(price*quantity, false);
+                    return price*quantity;
             }
     }
 }

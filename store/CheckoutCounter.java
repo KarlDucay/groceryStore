@@ -7,7 +7,6 @@ import store.constructor.Product;
 import store.constructor.ScannedItem;
 import store.enums.SaleTypes;
 import store.helper.CheckandCalculateSaletype;
-import store.helper.SaleResult;
 
 public class CheckoutCounter {
     
@@ -21,9 +20,9 @@ public class CheckoutCounter {
         double discount = product.getDiscount();
         SaleTypes saleTypes= product.getSaletype();
 
-        SaleResult result = sale.checkandCalculateSaletype(saleTypes, price, quantity, discount);
+        double result = sale.checkandCalculateSaletype(saleTypes, price, quantity, discount);
 
-        price=result.discountedPrice();
+        price=result;
         
         scannedProducts.add(new ScannedItem(product, quantity,price));
         totalPrice += price;
