@@ -3,6 +3,8 @@ package store;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.management.loading.PrivateClassLoader;
+
 import store.constructor.Product;
 import store.enums.SaleTypes;
 import store.helper.CheckandCalculateSaletype;
@@ -23,24 +25,9 @@ public class CheckoutCounter {
 
         SaleResult result = sale.checkandCalculateSaletype(saleTypes, price, quantity, discount);
 
-        if(quantity!=1){
-            if (result.isOnSale()) {
-                price = result.discountedPrice();
-            }
-            else 
-            {
-                price = product.getPrice() * quantity;
-            } 
-            scannedProducts.add(new ScannedItem(product, quantity,price));
-        }
-        else {
-            if (result.isOnSale()) {
-            price = result.discountedPrice();
-            }
-            else price = product.getPrice() * quantity;
-            scannedProducts.add(new ScannedItem(product, quantity,price));
-        }
-       
+        price=result.discountedPrice();
+        
+        scannedProducts.add(new ScannedItem(product, quantity,price));
         totalPrice += price;
     }
 

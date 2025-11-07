@@ -8,6 +8,7 @@ public class CheckandCalculateSaletype {
     public SaleResult checkandCalculateSaletype (SaleTypes saleTypes,double price, double quantity,double discount){
         SalesPromotion promotion= new ProductOnSale();
         double discountedPrice;
+        
 
         switch (saleTypes) {
                 case BUY_ONE_TAKE_ONE:
@@ -20,7 +21,7 @@ public class CheckandCalculateSaletype {
                     discountedPrice =promotion.buyTwoTakeOne(price, quantity);
                     return new SaleResult(discountedPrice, true);
                 default:
-                    return new SaleResult(price, false);
+                    return new SaleResult(price*quantity, false);
             }
     }
 }
