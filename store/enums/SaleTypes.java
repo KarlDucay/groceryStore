@@ -6,7 +6,5 @@ public enum SaleTypes {
     BUY_ONE_TAKE_ONE,
     BUY_TWO_TAKE_ONE,
     BULK,
-    SEASONAL
-
 
 }
